@@ -1,0 +1,21 @@
+body{
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.section-profile {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.section-profile ul {
+    list-style: none; /* Elimina el bullet */
+    padding-left: 0;
+    margin-left: 0; 
+}
+
+.profile-image {
+    height: 10rem;
+}

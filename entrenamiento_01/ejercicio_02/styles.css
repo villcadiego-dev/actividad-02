@@ -1,0 +1,135 @@
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body{
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+main {
+    flex: 1; /* ocupa todo el espacio sobrante entre header y footer */ 
+    overflow-y: auto; /* si el contenido desborda, scroll interno aparece */ 
+    padding: 1rem 0;
+}
+
+nav {
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.section-recetas{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+/* Estos estilos para article son magia de internet 
+    1. Estado normal: card con borde sutil, esquinas redondeadas, sombra leve.
+    2. Hover: la card sube 2px y la sombra se agranda — como si estuviera flotando.                                                                                                       
+    3. Transición: el cambio dura 0.2s, suave.   
+*/
+article {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+article:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+    transform: translateY(-0.125rem);
+}
+
+article h2 {
+    text-align: center;
+}
+
+article img {
+    display: block;
+    margin: 0 auto;
+    height: 20rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/* Estilos para la sección de contacto */
+.section-contacto {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #e5e7eb;
+}
+
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-form button {
+    flex: 1;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-form button[type="reset"] {
+    background: white;
+    color: black;
+    border-color: #e5e7eb;
+}
+
+.contact-form button:hover {
+    filter: brightness(0.9);
+}
