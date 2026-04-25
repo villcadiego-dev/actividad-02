@@ -1,0 +1,230 @@
+:root{
+--color-verde: #dcedc8;
+--color-amarillo: #ffe0b2;
+--color-rosado: #ffcdd2;
+--color-azul: #b2d3df;
+}
+
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-size: 2rem;
+font-weight: bold;
+font-family: Arial, sans-serif;
+}
+
+.grilla-modelo-1{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    /* 4 columnas y 2 filas */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    /* se dibuja el layout */
+    grid-template-areas: 
+        "caja1 caja1 caja2 caja2"
+        "caja3 caja4 caja5 caja6";
+}
+/* Estilos para las cajas */
+.caja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.10rem solid black;
+}
+
+.grilla-modelo-1 .item-1{ grid-area: caja1; background-color: var(--color-verde); }
+.grilla-modelo-1 .item-2{ grid-area: caja2; background-color:var(--color-amarillo); }
+.grilla-modelo-1 .item-3{ grid-area: caja3; background-color:var(--color-rosado); }
+.grilla-modelo-1 .item-4{ grid-area: caja4; background-color:var(--color-rosado); }
+.grilla-modelo-1 .item-5{ grid-area: caja5; background-color:var(--color-rosado); }
+.grilla-modelo-1 .item-6{ grid-area: caja6; background-color:var(--color-rosado); }
+
+
+@media screen and (max-width: 48rem) {
+    .grilla-modelo-1{
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: 
+            "caja1 caja1"
+            "caja2 caja2"
+            "caja3 caja4"
+            "caja5 caja6";  
+    }
+
+    .grilla-modelo-1 .item-5, .grilla-modelo-1 .item-6{
+        background-color: #b2d3df;
+    }
+}
+
+.grilla-modelo-2{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    /* 2 columnas y 4 filas */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    /* se dibuja el layout */
+    grid-template-areas: 
+        "caja1 caja2"
+        "caja3 caja4"
+        "caja3 caja4"
+        "caja5 caja6";  
+}
+
+.grilla-modelo-2 .item-1{ grid-area: caja1; background-color:var(--color-verde); }
+.grilla-modelo-2 .item-2{ grid-area: caja2; background-color:var(--color-verde); }
+.grilla-modelo-2 .item-3{ grid-area: caja3; background-color:var(--color-amarillo); }
+.grilla-modelo-2 .item-4{ grid-area: caja4; background-color:var(--color-amarillo); }
+.grilla-modelo-2 .item-5{ grid-area: caja5; background-color:var(--color-rosado); }
+.grilla-modelo-2 .item-6{ grid-area: caja6; background-color:var(--color-azul); }
+
+@media screen and (max-width: 48rem) {
+    .grilla-modelo-2{
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: 
+            "caja6 caja6"
+            "caja5 caja5"
+            "caja3 caja4"
+            "caja2 caja2"
+            "caja1 caja1";  
+    }
+    .grilla-modelo-2 .item-6{
+        background-color: var(--color-rosado);
+    }
+    .grilla-modelo-2 .item-5{
+        background-color: var(--color-azul);
+    }
+
+}
+
+.grilla-modelo-3{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    /* 4 columnas y 3 filas */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* se dibuja el layout */
+    grid-template-areas: 
+        "caja1 caja1 caja1 caja2"
+        "caja3 caja3 caja3 caja4"
+        "caja5 caja5 caja5 caja6";  
+}
+
+.grilla-modelo-3 .item-1{ grid-area: caja1; background-color:var(--color-verde); }
+.grilla-modelo-3 .item-2{ grid-area: caja2; background-color:var(--color-verde); }
+.grilla-modelo-3 .item-3{ grid-area: caja3; background-color:var(--color-amarillo); }
+.grilla-modelo-3 .item-4{ grid-area: caja4; background-color:var(--color-amarillo); }
+.grilla-modelo-3 .item-5{ grid-area: caja5; background-color:var(--color-rosado); }
+.grilla-modelo-3 .item-6{ grid-area: caja6; background-color:var(--color-azul); }
+    
+@media screen and (max-width: 48rem) {
+    .grilla-modelo-3{
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 1fr 1fr 1fr;
+
+        grid-template-areas: 
+            "caja1"
+            "caja3"
+            "caja6";  
+    }
+
+    .grilla-modelo-3 .item-2,
+    .grilla-modelo-3 .item-4,
+    .grilla-modelo-3 .item-5 { display: none; }
+}
+
+
+.grilla-modelo-4{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    /* 4 columnas y 4 filas */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    /* se dibuja el layout */
+    grid-template-areas: 
+        "caja1 caja2 caja2 caja4"
+        "caja1 caja3 caja3 caja4"
+        "caja5 caja5 caja6 caja6"
+        "caja5 caja5 caja6 caja6";  
+}
+.grilla-modelo-4 .item-1{ grid-area: caja1; background-color:var(--color-verde); }
+.grilla-modelo-4 .item-2{ grid-area: caja2; background-color:var(--color-amarillo); }
+.grilla-modelo-4 .item-3{ grid-area: caja3; background-color:var(--color-amarillo); }
+.grilla-modelo-4 .item-4{ grid-area: caja4; background-color:var(--color-verde); }
+.grilla-modelo-4 .item-5{ grid-area: caja5; background-color:var(--color-rosado); }
+.grilla-modelo-4 .item-6{ grid-area: caja6; background-color:var(--color-azul); }
+
+ @media screen and (max-width:64rem) {
+    .grilla-modelo-4{
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-rows: 1fr 1fr 1fr;
+
+        grid-template-areas: 
+            "caja1 caja1 caja2"
+            "caja3 caja3 caja4"
+            "caja5 caja5 caja6";
+    }
+
+    .grilla-modelo-4 .item-2{
+        background-color: var(--color-verde);
+    }
+    .grilla-modelo-4 .item-4{
+        background-color: var(--color-amarillo);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .grilla-modelo-4{
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: 
+            "caja1"
+            "caja2"
+            "caja3"
+            "caja4"
+            "caja5"
+            "caja6";  
+    }
+    
+    .grilla-modelo-4 .item-2{
+        background-color: var(--color-verde);
+    }
+
+    .grilla-modelo-4 .item-4{
+        background-color: var(--color-amarillo);
+    }
+
+    .grilla-modelo-4 .item-5{
+        background-color: var(--color-azul);
+    }
+    .grilla-modelo-4 .item-6{
+        background-color: var(--color-rosado);
+    }
+}
+
+
