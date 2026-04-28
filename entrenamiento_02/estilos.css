@@ -61,6 +61,10 @@ font-family: Arial, sans-serif;
     .grilla-modelo-1 .item-5, .grilla-modelo-1 .item-6{
         background-color: #b2d3df;
     }
+
+    .grilla-modelo-1 .item-1{
+        margin-bottom: 1.5rem;
+    }
 }
 
 .grilla-modelo-2{
